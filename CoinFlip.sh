@@ -2,7 +2,7 @@
 RANDOM=$$
 
 PIPS=2
-MAXTHROWS=10
+MAXTHROWS=21
 throw=0
 
 Head=0
@@ -12,7 +12,9 @@ print_result ()
 echo
 echo "Head =   $Head"
 echo "Tails =   $Tails"
-
+echo "-------"
+echo ${arr[$Head]}
+echo ${arr[$Tails]}
 echo
 }
 
@@ -34,7 +36,13 @@ do
   let "throw += 1"
 done
 
-print_result
-exit 0#! /bin/bash -x
+if [[ ${arr[$Head]} -gt ${arr[$Tails]} ]];
+then
+    echo "Head is win"
+     elif [[${Head} -eq ${arr[$Tails]} ]];
+then
+     echo "Tie"
+fi
 
-echo "Welcome"
+print_result
+exit 0
