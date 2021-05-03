@@ -1,3 +1,14 @@
 #! /bin/bash -x
 
 echo "Welcome"
+
+Head=0
+Tils=1
+REsult=$((RANDOM%2))
+if [[ ${Result} -eq 0 ]];
+then
+    echo "HEADS"
+     elif [[${Result} -eq 1 ]];
+then
+     echo "Tails"
+fi
